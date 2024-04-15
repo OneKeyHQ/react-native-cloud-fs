@@ -10,7 +10,7 @@ buildscript {
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion 34
     buildToolsVersion "28.0.3"
 
     defaultConfig {
@@ -43,9 +43,7 @@ allprojects {
 
 dependencies {
     implementation 'com.google.android.gms:play-services-drive:17.0.0'
-    implementation ('com.google.android.gms:play-services-auth:17.0.0') {
-        force = true;
-    }
+    implementation ('com.google.android.gms:play-services-auth:17.0.0')
     implementation 'com.google.http-client:google-http-client-gson:1.26.0'
     implementation('com.google.api-client:google-api-client-android:1.26.0') {
         exclude group: 'org.apache.httpcomponents'
