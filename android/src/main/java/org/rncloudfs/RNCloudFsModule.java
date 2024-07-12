@@ -199,7 +199,8 @@ public class RNCloudFsModule extends ReactContextBaseJavaModule implements Googl
                                 mPendingOperation = LIST_FILES;
                                 this.reactContext.startActivityForResult(e.getIntent(), REQUEST_AUTHORIZATION, null);
                             } catch (Exception e) {
-                                throw e;
+                                // throw e;
+                                promise.reject(e);
                             }
                         });
             } catch (Exception exception) {
