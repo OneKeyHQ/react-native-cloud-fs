@@ -191,15 +191,16 @@ public class RNCloudFsModule extends ReactContextBaseJavaModule implements Googl
                         })
                         .addOnFailureListener(exception -> {
                             clearPendingOperations();
-                            Log.e(TAG, "Unable to query files: " + exception.getCause().getMessage());
                             try {
+                                Log.e(TAG, "Unable to query files: " + exception.getCause().getMessage());
                                 UserRecoverableAuthIOException e = (UserRecoverableAuthIOException) exception;
                                 mPendingPromise = promise;
                                 mPendingOptions = options;
                                 mPendingOperation = LIST_FILES;
                                 this.reactContext.startActivityForResult(e.getIntent(), REQUEST_AUTHORIZATION, null);
                             } catch (Exception e) {
-                                throw e;
+                                // throw e;
+                                promise.reject(e);
                             }
                         });
             } catch (Exception exception) {
