@@ -393,8 +393,8 @@ public class RNCloudFsModule extends ReactContextBaseJavaModule implements Googl
         GoogleSignInOptions signInOptions =
                 new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                         .requestEmail()
-                        // .requestScopes(new Scope(DriveScopes.DRIVE_FILE))
-                        .requestScopes(new Scope(DriveScopes.DRIVE_APPDATA))
+                        .requestScopes(new Scope(DriveScopes.DRIVE_FILE))
+                        // .requestScopes(new Scope(DriveScopes.DRIVE_APPDATA))
                         .build();
         GoogleSignInClient client = GoogleSignIn.getClient(this.reactContext, signInOptions);
 
@@ -427,8 +427,8 @@ public class RNCloudFsModule extends ReactContextBaseJavaModule implements Googl
         GoogleSignInOptions signInOptions =
                 new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                         .requestEmail()
-                        // .requestScopes(new Scope(DriveScopes.DRIVE_FILE))
-                        .requestScopes(new Scope(DriveScopes.DRIVE_APPDATA))
+                        .requestScopes(new Scope(DriveScopes.DRIVE_FILE))
+                        // .requestScopes(new Scope(DriveScopes.DRIVE_APPDATA))
                         .build();
         GoogleSignInClient client = GoogleSignIn.getClient(this.reactContext, signInOptions);
         mDriveServiceHelper = null;
